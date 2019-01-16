@@ -5,7 +5,7 @@
     // flex: 1;
     margin: 0 0.2rem;
     min-height: auto;
-    @media only screen and (min-width: $query__larger) {
+    @media only screen and (min-width: $query__largest) {
         // border: 2px solid red;
         min-height: 100%;
         margin: 0 83.5px;
@@ -32,21 +32,93 @@
     
     margin: 0 0.2rem 4rem 0.2rem;
     padding: 0 0.2rem 4rem 0.2rem;
+    position: relative;
     
     
     // @media only screen and (max-width: $query__small) {
     //     margin: 0 0.2rem 4rem 0.2rem;
     //     padding: 0 0.2rem;
     // }
-    @media only screen and (min-width: $query__large) {
-        // border: 2px solid yellow;
+    @media only screen and (min-width: $query__largest) {
         // height: 475px;
         width: 100%;
         // width: auto;
         margin: 1rem;
         padding: 2rem;
     }
+    
+    
 }
+
+.project-overlay__description {
+    border: 2px solid yellow;
+    font-size: 21.9rem;
+    // width: 3.2rem;
+    position: absolute;
+top: 50%;
+margin: 1rem;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.project-overlay {
+    
+    &__title {
+        font-size: 2.9rem;
+        text-transform: uppercase;
+        //    margin: 7rem auto auto auto
+        position: absolute;
+        top: 7rem;
+        margin: 1rem;
+        left: 50%;
+        transform: translate(-50%);
+        @media only screen and (max-width: $query__largest) {
+            top: 3rem;
+            margin: 1rem;
+           }
+        
+    }
+    
+    &__description {
+        // border: 2px solid yellow;
+        //     font-size: 21.9rem;
+        //     // width: 3.2rem;
+        //     position: absolute;
+        // top: 50%;
+        // margin: 1rem;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        }
+        
+        
+        
+        &__buttons {
+            
+            
+            position: absolute;
+            bottom: 4rem;
+            margin: 1rem;
+            left: 50%;
+            transform: translate(-50%);
+            
+            text-transform: uppercase;
+            @media only screen and (max-width: $query__largest) {
+                
+                margin: .2rem;
+                bottom: 3.5rem;
+                width:100%;
+               }
+            
+            
+            
+            //     .btn {
+                // // border: 4px solid blue;
+                // position: absolute;
+                // bottom: 2rem;
+                // margin: 4rem;
+                //     }
+            }
+        }
 
 .project__img {
     transition: all 0.4s;

@@ -8,7 +8,8 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-import { Spring, config } from 'react-spring'
+import { Spring, Transition, config } from 'react-spring'
+import ProjectOverlay from '../components/ProjectOverlay';
 
 // const ProjectsWrapper = (props) => {
 //   return (
@@ -20,9 +21,14 @@ import { Spring, config } from 'react-spring'
 
 
 class Projects2 extends Component {
+
+  state = {
+    toggle: false
+  }
   render() {
+    const { toggle } = this.state;
 
-
+    const img1 = toggle ? (<div></div>) : (<Img className="project__img" fluid={this.props.data.image1.childImageSharp.fluid} style={{ backgroundColor: '#1a68af' }} />);
 
     return (
       // console.log(props);
@@ -45,11 +51,43 @@ class Projects2 extends Component {
         <div className="projects-grid" >
           <Spring from={{ marginTop: 500, opacity: 0 }} to={{ marginTop: 0, opacity: 1 }} delay='300'>
             {props => (
-              <div className='project-container' style={props} >
-                <Img className="project__img" fluid={this.props.data.image1.childImageSharp.fluid} />
+
+              <div className='project-container' style={props} onMouseEnter={() => this.setState({ toggle: !toggle })}
+                onMouseLeave={() => this.setState({ toggle: !toggle })}
+              >
+
+                {/* <Img className="project__img" fluid={this.props.data.image1.childImageSharp.fluid} style={{ border: '4px solid green', backgroundColor: '#1a68af' }} /> */}
+                {/* {img1} */}
+
+                {/* <Transition 
+                from={{ opacity: 0, transform: 'translate3d(100%,0,0)' }}
+                enter={{ opacity: 1, transform: 'translate3d(0%,0,0)' }}
+                leave={{ opacity: 0, transform: 'translate3d(-50%,0,0)' }}
+               >  */}
+                {img1}
+
+                {/* </Transition> */}
+
+
+                {toggle &&
+                  <ProjectOverlay
+                    siteName='Gig Findr'
+                    siteDescription="Full Stack Javascript CRUD Single Page Application using React, Redux, Firestore and Firebase"
+                    siteLink="https://www.martalynx.com/"
+                    github={true}
+                    githubLink="https://github.com/michaelpsheehan/gig-findr"
+                  />
+
+
+                }
+                {/* <ProjectOverlay /> */}
               </div>
+
+
             )}
           </Spring>
+
+
 
           <Spring from={{ marginTop: 500, opacity: 0 }} to={{ marginTop: 0, opacity: 1 }} delay='500'>
             {props => (
@@ -67,7 +105,7 @@ class Projects2 extends Component {
 
 
 
-        
+
 
         <AniLink cover
           direction="right"
