@@ -1,1 +1,23 @@
 $color__main: #1a68af;
+$color__transition: #2b2c28;
+$color__white: #fff;
+$color__text: #ddd;
+
+
+$font__main: 'Lato', sans-serif;
+// $font__main: 'Droid Sans';
+
+
+
+// /*--------------------------------------------------------------
+// # Media Queries
+// --------------------------------------------------------------*/
+
+$query__small: 600px;
+$query__medium: 900px;
+$query__hd: 1921px;
+
+
+$query__large: 62.5rem; //1000px
+$query__larger: 75em; //1200px
+$query__largest: 90em; //1200px

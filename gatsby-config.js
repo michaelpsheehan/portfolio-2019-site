@@ -1,19 +1,49 @@
 module.exports = {
   siteMetadata: {
-    title: `Built by Mike`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Michael Sheehan Web Development and Design`,
+    description: `Web developer and Designer. I build websites with HTML5, CSS3 and Javascript. I use React to create dynamic Single Page Applications. I use Gatsby.js to create static webpages and create headless Wordpress sites.`,
     author: `@gatsbyjs`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-transition-link`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+        // path: path.join(__dirname, `src`, `images`),
       },
     },
+
+
+
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          // families: ['Droid Sans:300,400', 'Droid Serif']
+          families: ['Lato:300,400', 'Sans Serif']
+        }
+      }
+    },
+
+
+
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Lato`,
+    //         variants: ["300", "400"],
+    //         subsets: [`latin`],
+    //       }
+    //     ],
+    //   },
+    // },
+
 
 
 

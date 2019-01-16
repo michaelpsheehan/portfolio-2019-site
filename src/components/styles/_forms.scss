@@ -1,0 +1,24 @@
+button{
+
+}
+
+
+.btn {
+    background-color: $color__white;
+    color: $color__main;
+    border: none;
+    padding: .15rem 1rem;
+    margin: 2rem 1rem;
+
+}
+
+.btn--ghost {
+    background-color: transparent;
+    border: 1px solid $color__white;
+    color: $color__white;
+
+    &:hover {
+        background-color: $color__white;
+    color: $color__main;
+    }
+}
