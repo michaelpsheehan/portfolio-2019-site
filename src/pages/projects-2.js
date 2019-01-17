@@ -121,10 +121,10 @@ class Projects2 extends Component {
         >
           Go back to the homepage
       </AniLink>
-
+        {/* 
         {htmlIcon}
         {cssIcon}
-        {phpIcon}
+        {phpIcon} */}
 
 
 

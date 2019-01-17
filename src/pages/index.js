@@ -54,7 +54,7 @@ const IndexPage = () => (
 
         <Spring from={{ transform: 'translate3d(0 ,500%,0)', opacity: 0 }} to={{ transform: 'translate3d(0,0,0)', opacity: 1 }} delay='100'>
           {props => (
-            <AniLink cover direction="up" top="exit" to="page-2" bg="#131515">
+            <AniLink cover direction="up" top="exit" to="contact" bg="#131515">
               {/* Go to Page 4 */}
               <button className="btn btn--ghost" style={props}>CONTACT ME</button>
             </AniLink>

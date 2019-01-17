@@ -52,7 +52,7 @@ class ProjectOverlay extends Component {
                   )}
                 </Spring>
 
-                <div classname='project-overlay__description'
+                <div className='project-overlay__description'
                   style={{
                     // border: '2px solid yellow',
                     fontSize: '1.9rem',

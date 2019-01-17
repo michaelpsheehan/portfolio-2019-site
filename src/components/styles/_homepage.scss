@@ -1,6 +1,6 @@
 .test{
     color: color__main;
-    background-color: blue;
+    // background-color: blue;
     border: 2px solid yellow;
 }
 
@@ -66,4 +66,77 @@ h2{
 
     // min-height: 100vh;
     // height: 100%;
+
+&--what-i-use {
+    margin: auto;
+    // background-color: blue;
+    // min-height: 90%;
+    display: grid;
+
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns:  repeat(2, 1fr);
+
+    @media only screen and (min-width: $query__small) {
+    // border: 1px solid yellow;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-columns:  repeat(3, 1fr);
+}
+   
+        @media only screen and (min-width: $query__large) {
+        // border: 1px solid yellow;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns:  repeat(5, 1fr);
+    }
+
+
+
+
+
+
+
+
+
+}
+}
+
+.tools-icon {
+    border: 1px solid blue;
+    margin:2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    // padding-top: 2rem;
+
+    &__text {
+        // // position: relative;
+        // // top: 2rem;
+        // // padding-bottom: 2rem;
+        // // top: 0;
+        // // justify-content: flex-start;
+        // // justify-self: flex-start;
+        // justify-self: start;
+        // // align-items: flex-start;
+        
+        // // align-self: start;
+    }
+}
+.tools-icon__text {
+
+    // position: relative;
+        // top: 2rem;
+        // padding-bottom: 2rem;
+        // top: 0;
+        // justify-content: flex-start;
+        // justify-self: flex-start;
+        // justify-self: start;
+        // align-items: flex-start;
+        
+        // align-self: start;
+}
+
+.tools-icon__icon {
+    // border: 4px solid yellow;
+    // justify-self: self-end;
+    // align-self: start;
 }
