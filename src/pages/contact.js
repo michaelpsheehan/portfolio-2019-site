@@ -37,7 +37,7 @@ const SecondPage = () => (
                 // bg="#2b2c28"
                 bg="#131515"
             > */}
-                <button class="btn btn--full">Send</button>
+                <button className="btn btn--full">Send</button>
                 {/* </AniLink> */}
             </form>
 

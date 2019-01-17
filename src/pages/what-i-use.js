@@ -29,7 +29,8 @@ const WhatIUse = () => (
             // justifyContent: 'center',
             // minHeight: '100%',
             maxWidth: '1140px',
-            border: '2px solid green'
+            paddingTop: '4rem',
+            // border: '2px solid green'
 
 
 

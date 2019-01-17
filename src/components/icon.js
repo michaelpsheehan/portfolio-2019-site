@@ -10,9 +10,18 @@ const Icon = ({ name, iconName }) => {
         <>
 
             <div className="tools-icon" >
-                <div className="tools-icon__text">{name}</div>
 
-                <div className="tools-icon__icon">{iconName}</div>
+                <div className="tools-icon__text">
+                    {name}
+                </div>
+
+                <div className="tools-icon__icon">
+                    <div>
+
+                        {iconName}
+                    </div>
+
+                </div>
 
             </div>
 

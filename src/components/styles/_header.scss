@@ -16,10 +16,16 @@
 .nav-burger, .nav-burger-home {
     z-index: 999;
     position: absolute;
-    right:6.5rem;
+    right:.5rem;
     &:hover {
         cursor: pointer;
     }
+    
+    @media only screen and (min-width: $query__largest) {
+        right:6.5rem;
+
+    }
+
 }
 
 .nav-burger {
