@@ -31,7 +31,7 @@ class Header extends Component {
         <div className='header navbar'
 
         >
-          <div className='nav-burger' onClick={this.toggle}>
+          <div className='nav-burger-container' onClick={this.toggle}>
             {/* {navBurger} */}
             <NavBurger isToggled={isToggled} />
           </div>

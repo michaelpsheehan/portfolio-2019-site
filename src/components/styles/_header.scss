@@ -2,6 +2,7 @@
     background-color: $color__main;
     // height: 177px;
     height: 14rem;
+    // width: 100vw;
     // display: flex;
     position: relative;
 
@@ -34,10 +35,31 @@
 
 }
 
+.nav-burger--close {
+    &:hover {
+        cursor: pointer;
+    }
+    z-index: 999;
+// border: 2px solid green;
+position: fixed;
+right: 3rem;
+top: 2.5rem;
+@media only screen and (min-width: $query__small) {
+top: 4.5rem;
+}
+// top: 2rem;
+@media only screen and (min-width: $query__largest) {
+    right:9.5rem;
+
+}
+
+}
 
 .nav-burger--home {
        top: 7rem;
 }
+
+
 
 // .navbar {
 //     height: 177px;
@@ -58,16 +80,46 @@
     }
 
     &__list {
+
+        // display:block;
         position: absolute;
         top:50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        // margin: 10rem .2rem;
+        // margin: 8rem auto 70rem auto;
+        // padding: 8rem auto 70rem auto;
+        @media only screen and (min-width: $query__small) {
+        }
+
+
+
+// display: flex;
+// flex-direction: column;
+// justify-content: space-around;
+// align-items: center;
+
     }
 
     &__item{
+
+
         text-transform: uppercase;
         color: $color__white;
-        font-size: 3.9rem;
-        margin: 7rem;
+        font-size: 3.3rem;
+        margin:3rem .1rem;
+        white-space:nowrap;
+        // margin: 8rem, auto 7rem auto;
+        // padding-bottom: 10rem;
+        @media only screen and (min-width: $query__small) {
+            font-size: 3.9rem;
+        margin: 7rem .2rem;
+        }
+        // margin: 2rem 0;
+        @media only screen and (min-width: $query__largest) {
+            margin: 7rem;
+        
+        }
+
     }
 }

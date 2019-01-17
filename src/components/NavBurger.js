@@ -24,9 +24,9 @@ class NavBurger extends Component {
     return (
       <>
 {/* <Menu/> */}
-        <div className='nav-burger' 
+        {/* <div className='nav-burger' 
         // onClick={this.toggle}
-        >
+        > */}
           {/* <Spring
         from={{ color: 'white' }}
         to={{
@@ -45,11 +45,15 @@ class NavBurger extends Component {
           {!isToggled &&
             // navBurger
             <>
-
+ <div className='nav-burger' >
             <Spring from={{ opacity: 0.6, scale: 0.2, height: '80.675'}} to={{ opacity: 1, scale: 1, height: '110.675' }} >
               {props => (
 
-                <svg style={props}
+                <svg 
+
+              
+                
+                style={props}
                   xmlns="http://www.w3.org/2000/svg"
                   width="109.74"
                   height="110.675"
@@ -86,18 +90,28 @@ class NavBurger extends Component {
             </Spring>
 
 {/* <Menu/> */}
+</div>
 </>
 
           }
           {isToggled &&
 <>
 
-
+{/* <div className='nav-burger' > */}
+<div className='nav-burger--close' >
 <svg 
-xmlns="http://www.w3.org/2000/svg" 
-width="69.957" 
-height="69.957" 
-viewBox="0 0 69.957 69.957"
+  // className="nav-burger--close"
+  
+  xmlns="http://www.w3.org/2000/svg" 
+
+
+  // width="69.957" 
+  // height="69.957" 
+
+
+  width="45" 
+  height="45" 
+  viewBox="0 0 69.957 69.957"
 >
 
 <g 
@@ -120,12 +134,13 @@ transform="translate(-19.272 -20.017)"
  </svg>
 
 
+ </div>
             
 
             </>
           }
 
-        </div>
+        {/* </div> */}
 
       </>
     )
