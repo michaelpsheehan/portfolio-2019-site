@@ -10,36 +10,44 @@ import TransitionLink from 'gatsby-plugin-transition-link'
 import { Spring, config } from 'react-spring'
 
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+// import { navBurger } from '../../public/icons/SVG/icons'
+import NavBurger from '../components/NavBurger'
 
 const IndexPage = () => (
   <>
- 
+
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
     <div className="hero">
+      <div className='nav-burger nav-burger--home'>
+        {/* {navBurger} */}
+        <NavBurger />
+      </div>
 
       <div className="hero__text">
-      <Spring from={{
-                transform: 'translate3d(0 ,-100%,0)',
-                               opacity: 0 }} to={{ 
-                 transform: 'translate3d(0,0,0)', 
-                paddingBottom: '0',
-                 opacity: 1 }} >
+        <Spring from={{
+          transform: 'translate3d(0 ,-100%,0)',
+          opacity: 0
+        }} to={{
+          transform: 'translate3d(0,0,0)',
+          paddingBottom: '0',
+          opacity: 1
+        }} >
           {props => (
 
-            <h2 className='hero__text-h2' 
-            style={props}
+            <h2 className='hero__text-h2'
+              style={props}
             >
-            
+
               <span className="hero__text--line-1" style={props}>I am a freelance web developer</span>
-        
-          
+
+
               <span className="hero__text--line-2"> and digital ninja</span>
             </h2>
 
-                 )}
-                             </Spring>
-      
+          )}
+        </Spring>
+
 
 
 

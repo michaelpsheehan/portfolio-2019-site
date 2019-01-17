@@ -16,9 +16,9 @@
 .projects-grid {
     
     
+    display: grid;
     grid-template-columns: 1fr ;
     margin: 0;
-    display: grid;
     
     @media only screen and (min-width: $query__large) {
         // border: 1px solid pink;
@@ -33,6 +33,8 @@
     margin: 0 0.2rem 4rem 0.2rem;
     padding: 0 0.2rem 4rem 0.2rem;
     position: relative;
+    width:100%;
+    height: 100%;
     
     
     // @media only screen and (max-width: $query__small) {
@@ -121,12 +123,8 @@ transform: translate(-50%, -50%);
         }
 
 .project__img {
-    transition: all 0.4s;
+  
     &:hover {
-        // filter:brightness(.2); 
-        //  filter: sepia(90%);
-        //  filter: blur(10px);
-        //  filter: contrast(175%) brightness(3%);
-        // background-color: rgb(14, 12, 12);
+       
     }
 }

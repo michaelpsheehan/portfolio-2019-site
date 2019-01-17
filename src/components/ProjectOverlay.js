@@ -11,11 +11,12 @@ class ProjectOverlay extends Component {
     return (
       <>
 
-        <Spring from={{ opacity: 0 }}
+        <Spring from={{ opacity: 0.6 }}
           to={{
             opacity: 1,
             // color: '#1a68af',
             height: '100%',
+            // height: 'auto',
             width: '100%',
             // border: '1px solid blue',
             zIndex: '200',
@@ -34,7 +35,17 @@ class ProjectOverlay extends Component {
               <div className="project-overlay" style={props}>
 
 
-                <Spring from={{ opacity: 0 }} to={{ opacity: 1, color: '#fff' }} delay='100'>
+                <Spring from={{
+                  opacity: 0,
+                  transform: 'translate3d(-50% ,-30%,0)'
+                }}
+                  to={{
+                    transform: 'translate3d(-50% ,0,0)',
+                    opacity: 1,
+                    color: '#fff'
+                  }}
+                // delay='100'
+                >
                   {props => (
                     <div className="project-overlay__title" style={props}>{siteName}</div>
 

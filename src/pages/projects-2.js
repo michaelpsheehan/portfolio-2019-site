@@ -11,6 +11,8 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { Spring, Transition, config } from 'react-spring'
 import ProjectOverlay from '../components/ProjectOverlay';
 
+import { htmlIcon, cssIcon, phpIcon } from '../../public/icons/SVG/icons'
+
 // const ProjectsWrapper = (props) => {
 //   return (
 //     <div style={props} >YOYOYOYOYOYOYOYO</div>
@@ -28,7 +30,11 @@ class Projects2 extends Component {
   render() {
     const { toggle } = this.state;
 
-    const img1 = toggle ? (<div></div>) : (<Img className="project__img" fluid={this.props.data.image1.childImageSharp.fluid} style={{ backgroundColor: '#1a68af' }} />);
+    const img1 = toggle ? (<></>) : (<Img className="project__img" fluid={this.props.data.image1.childImageSharp.fluid} style={{ width: '100%' }} />);
+
+    // const htmlIcon = <svg xmlns="http://www.w3.org/2000/svg" width="115.05" height="130.474" viewBox="0 0 115.05 130.474"><path d="M1.892,0,12.358,117.43l46.987,13.043,47.109-13.064L116.942,0H1.9ZM97.481,109.936,59.61,120.431v.061l-.1-.029-.1.029v-.061l-37.87-10.495L12.595,9.6h93.839l-8.95,100.338ZM77.094,67.557,75.43,86.231,59.349,90.573,43.313,86.251l-1.027-11.5H27.824L29.842,97.37l29.569,8.179L88.886,97.37l3.955-44.214H40.349L39.036,38.408H94.149l1.288-14.4H23.294l3.886,43.55Z" transform="translate(-1.892)" fill="#dd4b25" /></svg>
+
+
 
     return (
       // console.log(props);
@@ -115,6 +121,10 @@ class Projects2 extends Component {
         >
           Go back to the homepage
       </AniLink>
+
+        {htmlIcon}
+        {cssIcon}
+        {phpIcon}
 
 
 

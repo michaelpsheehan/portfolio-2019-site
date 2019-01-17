@@ -3,6 +3,7 @@
     // height: 177px;
     height: 14rem;
     // display: flex;
+    position: relative;
 
     @media only screen and (max-width: $query__small) {
         height: 10rem;
@@ -11,7 +12,56 @@
 
 }
 
+
+.nav-burger, .nav-burger-home {
+    z-index: 999;
+    position: absolute;
+    right:6.5rem;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.nav-burger {
+    top: 50%;
+    transform: translate(0, -50%);
+
+}
+
+
+.nav-burger--home {
+       top: 7rem;
+}
+
 // .navbar {
 //     height: 177px;
 //     color: green;
 // }
+
+
+
+.navbar {
+
+    
+  &__background {
+        background-color: green;
+        height: 100vh;
+        width:100vw;
+        position: fixed;
+        z-index: 888;
+    }
+
+    &__list {
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__item{
+        text-transform: uppercase;
+        color: $color__white;
+        font-size: 3.9rem;
+        margin: 7rem;
+    }
+}
