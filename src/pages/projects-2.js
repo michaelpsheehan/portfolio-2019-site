@@ -9,7 +9,7 @@ import SEO from '../components/seo'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import { Spring, Transition, config } from 'react-spring'
-import ProjectOverlay from '../components/ProjectOverlay';
+// import ProjectOverlay from '../components/ProjectOverlay----old';
 
 import { htmlIcon, cssIcon, phpIcon } from '../../public/icons/SVG/icons'
 
@@ -75,17 +75,7 @@ class Projects2 extends Component {
                 {/* </Transition> */}
 
 
-                {toggle &&
-                  <ProjectOverlay
-                    siteName='Gig Findr'
-                    siteDescription="Full Stack Javascript CRUD Single Page Application using React, Redux, Firestore and Firebase"
-                    siteLink="https://www.martalynx.com/"
-                    github={true}
-                    githubLink="https://github.com/michaelpsheehan/gig-findr"
-                  />
 
-
-                }
                 {/* <ProjectOverlay /> */}
               </div>
 
