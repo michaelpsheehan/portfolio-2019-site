@@ -98,7 +98,10 @@ class Projects2 extends Component {
           <Spring from={{ marginTop: 500, opacity: 0 }} to={{ marginTop: 0, opacity: 1 }} delay='500'>
             {props => (
               <div className='project-container' style={props} >
-                <Img className="project__img" fluid={this.props.data.image2.childImageSharp.fluid} />
+                <Img className="project__img " fluid={this.props.data.image2.childImageSharp.fluid} />
+                <div className="overlay-test">
+
+                </div>
               </div>
             )}
           </Spring>
