@@ -18,25 +18,32 @@
     
     display: grid;
     grid-template-columns: 1fr ;
+    // grid-column-gap: 6rem;
+    grid-column-gap: 4rem;
+
     margin: 0;
     
     @media only screen and (min-width: $query__large) {
         // border: 1px solid pink;
         grid-template-columns: 1fr 1fr;
-        margin: 2rem;
+        // margin: 2rem;
+        margin: 1rem;
        }
 
 }
 
+
+
+
 .project-container {
     
     margin: 0 0.2rem 4rem 0.2rem;
-    padding: 0 0.2rem 4rem 0.2rem;
+    // padding: 0 0.2rem 4rem 0.2rem;
     position: relative;
     width:100%;
     // height: 100%;
     height: auto;
-    
+       
     
     // @media only screen and (max-width: $query__small) {
     //     margin: 0 0.2rem 4rem 0.2rem;
@@ -47,184 +54,14 @@
         width: 100%;
         // width: auto;
         margin: 1rem;
-        padding: 2rem;
+        // padding: 2rem;
     }
     
     
 }
 
-.project-overlay__description {
-    // border: 2px solid yellow;
-    font-size: 21.9rem;
-    // width: 3.2rem;
-    position: absolute;
-top: 50%;
-margin: 1rem;
-left: 50%;
-transform: translate(-50%, -50%);
-}
 
 .project-overlay {
-    
-    &__title {
-        font-size: 2.9rem;
-        text-transform: uppercase;
-        //    margin: 7rem auto auto auto
-        position: absolute;
-        top: 7rem;
-        margin: 1rem;
-        left: 50%;
-        transform: translate(-50%);
-        @media only screen and (max-width: $query__largest) {
-            top: 3rem;
-            margin: 1rem;
-           }
-        
-    }
-    
-    &__description {
-        // border: 2px solid yellow;
-        //     font-size: 21.9rem;
-        //     // width: 3.2rem;
-        //     position: absolute;
-        // top: 50%;
-        // margin: 1rem;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
-        }
-        
-        
-        
-        &__buttons {
-            
-            
-            position: absolute;
-            bottom: 4rem;
-            margin: 1rem;
-            left: 50%;
-            transform: translate(-50%);
-            
-            text-transform: uppercase;
-            @media only screen and (max-width: $query__largest) {
-                
-                margin: .2rem;
-                bottom: 3.5rem;
-                width:100%;
-               }
-            
-            
-            
-            //     .btn {
-                // // border: 4px solid blue;
-                // position: absolute;
-                // bottom: 2rem;
-                // margin: 4rem;
-                //     }
-            }
-        }
-
-.project__img {
-  
-    &:hover {
-       
-    }
-}
-
-
-.container-test {
-width: 100%;
-position: relative;
-
-}
-
-.img-test {
-// width: 100%;
-// height: auto;
-}
-
-
-@keyframes moveInLeft {
-    0% {
-        opacity: .5;
-        // transform: translateX(-100px);
-    }
-    
-   
-    100% {
-        opacity: 1;
-        // transform: translateX(0);
-    }
-    
-    
-    
-    
-    
-}
-        .overlay-test {
-        
-           position: absolute;
-          top: 0;
-          bottom: 0;
-          left: 0;
-          right: 0;
-          height: auto;
-          width: 100%;
-          opacity: 0;
-          transition: .1s ease;
-          background-color: $color__main--lighter;
-                                &:hover {
-                                    animation: moveInLeft .2s ease-in;
-                                    // opacity: 1;
-            }
-        }
-
-.overlay-test2 {
-
-   position: absolute;
-//    top: 100;
-     width: 100%;
-     opacity: 0;
-   transition: .2s ease;
-   background-color: $color__main--lighter;
-   &:hover {
-       opacity: 1;
-       top: 0;
-       bottom: 0;
-       left: 0;
-       right: 0;
-       height: 100%;
-    }
-}
-
-
-
-.project-container-test {
-    
-    margin: 0 0.2rem 4rem 0.2rem;
-    padding: 0 0.2rem 4rem 0.2rem;
-    position: relative;
-    width:100%;
-    // height: 100%;
-    height: auto;
-    
-    
-    // @media only screen and (max-width: $query__small) {
-    //     margin: 0 0.2rem 4rem 0.2rem;
-    //     padding: 0 0.2rem;
-    // }
-    @media only screen and (min-width: $query__largest) {
-        // height: 475px;
-        width: 100%;
-        // width: auto;
-        margin: 1rem;
-        padding: 2rem;
-    }
-    
-    
-}
-
-
-.overlay-test-4 {
 
    position: absolute;
    top: 0;
@@ -232,86 +69,154 @@ position: relative;
       left: 0;
       right: 0;
       height: 100%;
-      width: 100%;
+    //   width: 100%;
       opacity: 0;
       transition: .2s ease;
       background-color: $color__main--lighter;
       color: $color__white;
+      overflow: hidden;
 
     //   ----   Overlay hover effects -----------------
-      &:hover {
-          opacity: 1;
-          
-            .project-overlay__button-1, .project-overlay__button-2  {bottom: 3.5rem;}
+   
+            &:hover {
+                                opacity: 1;
+                                .project-overlay__title {top: 1.2rem;  opacity: 1;}
+                                .project-overlay__description { left: 50%; opacity: 1;}
+                                .project-overlay__button-1, .project-overlay__button-2, .project-overlay__button-solo  {bottom: .1rem;}
+                                .project-overlay__button-2 {transition-delay: .1s;}
+                            
+                                @media only screen and(min-width: $query__small) {
+                                    .project-overlay__title {top: 6rem;}
+                                    .project-overlay__button-1, .project-overlay__button-2, .project-overlay__button-solo  {bottom: 3.5rem;}
+                                
+                                }
 
-            .project-overlay__button-2 {transition-delay: .1s;}
-            .project-overlay__title-test {top: 7rem;  opacity: 1;}
-            .project-overlay__description { left: 50%; opacity: 1;}
-
-
-
-                }
+                                @media only screen and(min-width: $query__large) {
+                                    .project-overlay__title {top: 4rem;}
+                                    // .project-overlay__description { left: 50%; opacity: 1;}
+                                    .project-overlay__button-1, .project-overlay__button-2, .project-overlay__button-solo  {bottom: 1.5rem;}
+                                    // .project-overlay__button-2 {transition-delay: .1s;}
+                                }
+                                @media only screen and(min-width: $query__largest) {
+                                    .project-overlay__title {top: 7rem; }
+                                    // .project-overlay__description { left: 50%; opacity: 1;}
+                                    .project-overlay__button-1, .project-overlay__button-2, .project-overlay__button-solo  {bottom: 3.5rem;}
+                                    // .project-overlay__button-2 {transition-delay: .1s;}
+                                }
+            }
 }
 
 
 
-.project-overlay__button-1, .project-overlay__button-2, {
+
+
+
+
+
+
+
+
+
+
+
+.project-overlay__button-1, .project-overlay__button-2, .project-overlay__button-solo {
     transition-delay: 2s;
     transition-property: bottom;
     transition: .2s ease;
-    
     bottom: -5rem;
     position: absolute;
-    // position: relative;
+    margin: 1.5rem 1rem;
+    
+    @media only screen and(min-width: $query__largest) {
+        // margin: 1.5rem 5rem;
+    }
+
+
+
 }
 
 
 .project-overlay__button-1 {
-    left: 40%;
-    transform: translate(-30%);
+    left: 10%;
+    // transform: translate(-10%);
+    // margin-right: 2rem;
+
+    @media only screen and(min-width: $query__small ) {
+        // left: 40%;
+        left: 35%;
+        // transform: translate(-40%);
+        // margin-right: 2rem;
+        
+    }
 }
 
 .project-overlay__button-2 {
-    left: 60%;
-    transform: translate(-60%);
+    right: 10%;
+    // transform: translate(-60%);
+    @media only screen and (min-width: $query__small) {
+        // left: 50%;
+        left: 55%;
+        // transform: translate(-60%);
+        // margin-left: 1rem;
+
+    }
 }
 
+
+.project-overlay__button-solo {
+    left: 50%;
+    transform: translate(-50%);
+}
 
 
 .project-overlay {
     
-    &__title-test {
+    &__title {
         transition: .2s ease;
-        
-        
-        font-size: 2.9rem;
+        font-size: 1.9rem;
         text-transform: uppercase;
-        //    margin: 7rem auto auto auto
         position: absolute;
         top: -10rem;
         margin: 1rem;
         left: 50%;
         transform: translate(-50%);
         opacity: 0;
+        
 
-        @media only screen and (max-width: $query__largest) {
+        @media only screen and (min-width: $query__small) {
+            font-size: 2.9rem;
             top: 3rem;
             margin: 1rem;
         }
-        
+
+        // @media only screen and (min-width: $query__largest) {
+        //     font-size: 2.9rem;
+        //     top: 3rem;
+        //     margin: 1rem;
+        // }
     }
     
     &__description {
         transition: .2s ease;
-
+        position: absolute;
+        top: 50%;
+        opacity: 0;
+        font-size: 1.2rem;
+    width: 32rem;
+    margin: 1rem;   
+    left: 1%;
+    transform: translate(-50%, -50%);
+    
+    @media only screen and(min-width: $query__small) {
         font-size: 1.9rem;
     width: 32rem;
-       position: absolute;
-    top: 50%;
     margin: 1rem;
-    left: -50%;
+    
+    left: 1%;
     transform: translate(-50%, -50%);
-    opacity: 0;
+            
+        }
+
 }
 
 

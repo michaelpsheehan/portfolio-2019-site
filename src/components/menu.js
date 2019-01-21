@@ -16,8 +16,8 @@ const Menu = ({ isToggled }) => {
 
                         <AniLink cover direction="right" to="/" bg="#131515"> <li className='navbar__item'>Home</li></AniLink>
                         <AniLink cover direction="right" to="projects-2" bg="#131515"><li className='navbar__item'>My Work</li></AniLink>
-                        <AniLink cover direction="right" to="what-i-use" bg="#131515"><li className='navbar__item'>What I Use</li></AniLink>
-                        <Link to='/contact'> <li className='navbar__item'>Contact Me</li></Link>
+                        <AniLink cover direction="right" to="what-i-use" bg="#131515"><li className='navbar__item' activeStyle={{ color: "red", }}>What I Use</li></AniLink>
+                        <Link to='/contact'  > <li className='navbar__item'>Contact Me</li></Link>
 
 
                     </ul>
