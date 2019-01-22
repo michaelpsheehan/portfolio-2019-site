@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 
 class ProjectOverlay extends Component {
   render() {
-    const { image, name, description, siteLink, github, githubLink } = this.props
+    const { image, name, description, siteLink, github, githubLink, delay } = this.props
 
     const buttons = githubLink ? (
       <>
@@ -31,23 +31,18 @@ class ProjectOverlay extends Component {
       )
 
 
+
+
+
     return (
       <>
-        <Spring from={{ marginTop: 500, opacity: 0 }} to={{ marginTop: 0, opacity: 1 }} delay='500'>
+        <Spring from={{ marginTop: 500, opacity: 0 }} to={{ marginTop: 0, opacity: 1 }} delay={delay}>
 
           {props => (
             <div className='project-container' style={props} >
               <Img className="project__img "
                 fluid={image}
-                style={{
-                  position: 'relative',
-                  width: '100%',
-                  height: 'auto',
-                  // padding: 0,
-                  // margin: 0,
-                  // top: 0,
-                  // left: 0
-                }}
+                style={{ position: 'relative', width: '100%', height: 'auto' }}
               />
 
               <div className="project-overlay">

@@ -5,68 +5,32 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-import {
-    htmlIcon, cssIcon,
-    sassIcon,
-    jsIcon, reactIcon, reduxIcon, gatsbyIcon, wordpressIcon, gulpIcon, gitIcon,
-    phpIcon
-} from '../../public/icons/SVG/icons'
+import { htmlIcon, cssIcon, sassIcon, jsIcon, reactIcon, reduxIcon, gatsbyIcon, wordpressIcon, gulpIcon, gitIcon } from '../../public/icons/SVG/icons'
 
-// import { sassIcon } from '../../public/icons/SVG/sass-icon'
 
 
 import Icon from '../components/icon';
 
 const WhatIUse = () => (
+
     <Layout>
         <SEO title="Contact Form" />
         <h1>I Develop With</h1>
 
-        <div className="site-content--what-i-use" style={{
-            // textAlign: 'center',
-            // display: 'flex',
-            // alignItems: 'start',
-            // justifyContent: 'center',
-            // minHeight: '100%',
-            maxWidth: '1140px',
-            paddingTop: '4rem',
-            // border: '2px solid green'
+        <div className="site-content--what-i-use" style={{ maxWidth: '1140px', paddingTop: '4rem' }}>
 
-
-
-        }}>
-
-            <Icon name='HTML5' iconName={htmlIcon} />
-            <Icon name='CSS3' iconName={cssIcon} />
-            <Icon name='SASS' iconName={sassIcon} />
-            <Icon name='Javascript' iconName={jsIcon} />
-            <Icon name='React' iconName={reactIcon} />
-            <Icon name='Redux' iconName={reduxIcon} />
-            <Icon name='Gatsby' iconName={gatsbyIcon} />
-            <Icon name='Wordpress' iconName={wordpressIcon} />
-            <Icon name='Gulp' iconName={gulpIcon} />
-            <Icon name='Git' iconName={gitIcon} />
-
-
-
-            {/* 
-            <div className="tools-icon" ><span className="tools-icon__text">HTML5</span>{htmlIcon}</div>
-            <div className="tools-icon" ><span className="tools-icon__text">HTML5</span>{htmlIcon}</div>
-            <div className="tools-icon" ><span className="tools-icon__text">HTML5</span>{htmlIcon}</div>
-            <div className="tools-icon" ><span className="tools-icon__text">HTML5</span>{htmlIcon}</div>
-            <div className="tools-icon" ><span className="tools-icon__text">HTML5</span>{htmlIcon}</div>
-            <div className="tools-icon" ><span className="tools-icon__text">HTML5</span>{htmlIcon}</div>
-            <div className="tools-icon" ><span className="tools-icon__text">HTML5</span>{htmlIcon}</div>
-            <div className="tools-icon" ><span className="tools-icon__text">HTML5</span>{htmlIcon}</div>
-            <div className="tools-icon" ><span className="tools-icon__text">HTML5</span>{htmlIcon}</div>
-            <div className="tools-icon" ><span className="tools-icon__text">HTML5</span>{htmlIcon}</div> */}
-
-
-
-
+            <Icon name='HTML5' iconName={htmlIcon} delay='0' />
+            <Icon name='CSS3' iconName={cssIcon} delay='50' />
+            <Icon name='SASS' iconName={sassIcon} delay='100' />
+            <Icon name='Javascript' iconName={jsIcon} delay='150' />
+            <Icon name='React' iconName={reactIcon} delay='200' />
+            <Icon name='Redux' iconName={reduxIcon} delay='250' />
+            <Icon name='Gatsby' iconName={gatsbyIcon} delay='300' />
+            <Icon name='Wordpress' iconName={wordpressIcon} delay='350' />
+            <Icon name='Gulp' iconName={gulpIcon} delay='400' />
+            <Icon name='Git' iconName={gitIcon} delay='450' />
 
         </div>
-        {/* <Link to="/">Go back to the homepage</Link> */}
     </Layout >
 )
 

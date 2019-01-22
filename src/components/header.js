@@ -18,6 +18,8 @@ class Header extends Component {
   }
 
 
+
+
   render() {
     const siteTitle = this.props;
     const isToggled = this.state.toggle;
@@ -32,35 +34,11 @@ class Header extends Component {
 
         >
           <div className='nav-burger-container' onClick={this.toggle}>
-            {/* {navBurger} */}
+
             <NavBurger isToggled={isToggled} />
           </div>
 
-          {/* <NavBurger /> */}
 
-
-          {/* 
-  <div
-  style={{
-    margin: `0 auto`,
-    maxWidth: 960,
-    padding: `1.45rem 1.0875rem`,
-  }}
-  >
-  <h1 style={{ margin: 0 }}>
-  <Link
-  to="/"
-  style={{
-    color: `white`,
-    textDecoration: `none`,
-  }}
-  >
-  {/* {siteTitle} */}
-          {/* </Link>
-      </h1 >
-    </div > */}
-
-          {/* * /} */}
 
         </div >
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'gatsby'
 
 import { graphql } from 'gatsby'
@@ -8,68 +8,90 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-import Spring from 'react-spring'
+import { Spring, Transition, config, animated } from 'react-spring'
+// import ProjectOverlay from '../components/ProjectOverlay----old';
 
-
-const Projects = (props) => (
-    // console.log(props);
-    <Layout>
-        <SEO title="Page two" />
-        {/* <Spring from={{ opacity: 0, marginTop: -1000 }} to={{ opacity: 1, marginTop: 0 }}> */}
-        <h1>Projects</h1>
-        {/* <p>Welcome to page 2</p> */}
-
-        <div className="projects-grid" >
-            <div className='project-container' >
-                {/* img-1 <Img fixed={data.file.childImageSharp.fixed} /> */}
-                <Img className="project__img" fluid={props.data.image1.childImageSharp.fluid} />
-            </div>
-            <div className='project-container' >
-                <Img className="project__img" fluid={props.data.image2.childImageSharp.fluid} />
-            </div>
-        </div>
+import image2 from '../images/martalynx1080.jpg'
+import OverlayTest from '../components/overlay_test';
+import ProjectOverlay from '../components/ProjectOverlay';
 
 
 
+class Projects extends Component {
 
 
+    state = {
+        toggle: false,
+        project1: {
+            name: 'Gig Findr',
+            description: ' Full Stack Javascript CRUD Portfolio App using React, Redux, Firebase and Firestore.',
+            siteLink: 'https://task-e5ee4.firebaseapp.com/',
+            githubLink: 'https://github.com/michaelpsheehan/gig-findr',
+        },
+        project2: {
+            name: 'Marta Lynx',
+            description: ' Bespoke Wordpress theme developed. Uses Custom Post Types, Advanced Custom Fields and custom PHP.',
+            siteLink: 'https://www.martalynx.com/',
 
 
+        }
+    }
 
 
+    render() {
 
-        <AniLink cover
-            direction="right"
-            to="/"
-            // bg="#2b2c28"
-            bg="#131515"
-        >
-            Go back to the homepage
-    </AniLink>
-        {/* <Link to="/">Go back to the homepage</Link> */}
+        const img1 = this.props.data.image1.childImageSharp.fluid;
+        const img2 = this.props.data.image2.childImageSharp.fluid;
+        const { project1, project2 } = this.state;
 
 
+        return (
+            <Layout>
+                <SEO title="Page two" />
 
-        {/* </Spring> */}
+                < Spring
+                    from={
+                        { opacity: 0 }}
+                    to={{ opacity: 1 }}
+                    delay='500'
+                >
+                    {props => (
+                        <>
+                            <h1 style={props}>Projects</h1>
+                            <hr></hr>
+                        </>
+                    )}
+                </Spring >
 
-    </Layout>
-)
+                <div className="projects-grid" >
+
+                    <ProjectOverlay
+                        image={img1}
+                        name={project1.name}
+                        description={project1.description}
+                        siteLink={project1.siteLink}
+                        githubLink={project1.githubLink}
+                        delay='0'
+                    />
+
+                    <ProjectOverlay
+                        image={img2}
+                        name={project2.name}
+                        description={project2.description}
+                        siteLink={project2.siteLink}
+                        delay='500'
+                    />
+
+                </div>
+                <AniLink cover direction="right" to="/" bg="#131515">Go back to the homepage </AniLink>
+            </Layout >
+        )
+    }
+}
+
 
 export default Projects
 
-// export const query = graphql`
-//   query {
-//     file(relativePath: { eq: "src/images/martalynx1080.jpg" }) {
-//       childImageSharp {
-//         # Specify the image processing specifications right in the query.
-//         # Makes it trivial to update as your page's design changes.
-//         fixed(width: 125, height: 125) {
-//           ...GatsbyImageSharpFixed
-//         }
-//       }
-//     }
-//   }
-// `
 
 
 export const projectsQuery = graphql`
@@ -89,8 +111,6 @@ export const projectsQuery = graphql`
         }
       }
     }
-
-
 
 
   }
