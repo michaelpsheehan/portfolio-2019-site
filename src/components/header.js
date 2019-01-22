@@ -23,7 +23,7 @@ class Header extends Component {
   render() {
     const siteTitle = this.props;
     const isToggled = this.state.toggle;
-
+    const burgerPosition = isToggled ? 'fixed' : 'absolute'
 
 
     return (
@@ -33,7 +33,12 @@ class Header extends Component {
         <div className='header navbar'
 
         >
-          <div className='nav-burger-container' onClick={this.toggle}>
+          <div
+            className='nav-burger-container'
+            onClick={this.toggle}
+            style={{ position: burgerPosition }}
+
+          >
 
             <NavBurger isToggled={isToggled} />
           </div>

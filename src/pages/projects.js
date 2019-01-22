@@ -53,7 +53,7 @@ class Projects extends Component {
                     from={
                         { opacity: 0 }}
                     to={{ opacity: 1 }}
-                    delay='500'
+                // delay='500'
                 >
                     {props => (
                         <>

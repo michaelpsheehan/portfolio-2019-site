@@ -15,15 +15,15 @@ const styles = {
       d: 'M54.87,0c30.3,0,54.87,24.775,54.87,55.337s-24.566,55.337-54.87,55.337S0,85.9,0,55.337,24.566,0,54.87,0Z'
     },
     line1: {
-      x2: "59.612",
+      x2:"59.612",    
       transform: "translate(1184.064 79.131)"
-    },
+    } ,
     line2: {
       x2: "39.29",
       transform: "translate(1204.386 98.26)"
     },
     line3: {
-      x2: "59.612",
+      x2:"59.612" ,
       transform: "translate(1184.064 117.389)"
     }
 
@@ -33,21 +33,21 @@ const styles = {
 
 
   closeNav: {
-    width: "45",
-    height: "45",
+    width: "45", 
+    height: "45", 
     viewBox: "0 0 69.957 69.957",
     gTransform: "translate(-19.272 -20.017)",
     path: {
-      d: "M0,37.986,60.851,0",
-      transform: "translate(67.067 21.077) rotate(77)"
+      d:"M0,37.986,60.851,0",
+      transform:"translate(67.067 21.077) rotate(77)"        
     },
-
+    
     line2: {
       d: "M0,37.986,60.851,0",
       transform: "translate(20.331 43.539) rotate(-13)"
     }
-
-
+    
+    
   }
 
 
@@ -70,37 +70,106 @@ class NavBurger extends Component {
 
   render() {
     // const isToggled = this.state.toggle;
-    const { isToggled } = this.props;
-    const { burger, closeNav } = styles;
+    const {isToggled} = this.props;
+    const {burger, closeNav} = styles;
 
-    const burgerLine3 = burger.line3.transform;
     console.log(burger)
     console.log(closeNav)
 
-    const menuStatus = isToggled ? 'open' : 'closed'
 
     console.log('toggle ====', closeNav.line2.d, 'no toggle = ', burger.line3.x2)
-    // console.log('burger is ', `${burger.line3.transform}`)
-    console.log('burger is ', burgerLine3)
-
     return (
       <>
 
 
+<Transition
+native
+items={isToggled}
+from={{opacity: 0,
+  // transformBottom: "translate(20.331 43.539) rotate(31)",
+  transformBottom: isToggled ? "translate(20.331 43.539) rotate(31)" : burger.line3.transform ,
+  bottomLine: isToggled ? closeNav.line2.d : burger.line3.x2 ,
+  
+  
+  
+}}
+enter={{ 
+  opacity: 1,  
+  // transform: "translate(20.331 43.539) rotate(-13)"
+  // transformBottom: "translate(20.331 43.539) rotate(-
+  bottomLine: !isToggled ? closeNav.line2.d : burger.line3.x2 ,
+  transformBottom: !isToggled ? "translate(20.331 43.539) rotate(31)" : burger.line3.transform ,
+  stroke: "#fffbfb"  
+  
+}}
+// leave={{ opacity: 1,
+//   bottomLine: isToggled ? closeNav.line2.d : burger.line3.x2 ,
+//   transformBottom: isToggled ? "translate(20.331 43.539) rotate(31)" : burger.line3.transform ,
+//   // transformBottom: "translate(20.331 43.539) rotate(31)",
+// }}
+
+// {console.log('the botom line is ',bottomLine, 'theTransform bottom is ---', transformBottom)}
+
+
+>
+{item => ({bottomLine, transformBottom, opacity, stroke}) => 
+<animated.div 
+// style={{transform}} 
+// style={props} 
+className="item" 
+// children={item} 
+>
+
+
+
+<div className='nav-burger--close' >
+<svg   
+  xmlns="http://www.w3.org/2000/svg" 
+  width="45" 
+  height="45" 
+  viewBox="0 0 69.957 69.957"
+>
+
+<g 
+transform="translate(-19.272 -20.017)"
+>
+<path
+ d="M0,37.986,60.851,0" 
+ transform="translate(67.067 21.077) 
+ rotate(77)" 
+ fill="none" 
+ stroke="#fffbfb" 
+ strokeWidth="3"/>
 
 
 
 
-        <div className={`nav-burger--${menuStatus}`} >
-          <span />
-          <span />
-          <span />
+ 
+ <animated.path 
+ d="M0,37.986,60.851,0" 
+//  d={bottomLine} 
+//  d='none' 
+//  transform="translate(20.331 43.539) 
+//  transform="translate(20.331 43.539) rotate(-13)" 
+// style={stroke} 
+ transform={transformBottom} 
+
+ fill="none" 
+ stroke="#fffbfb" 
+//  stroke={stroke} 
+ strokeWidth="3"/>
+ </g>
+ </svg>
 
 
-        </div>
+ </div>
+            </animated.div>
+          }
+ </Transition>
 
+   
 
-      </>
+     </>
     )
   }
 
@@ -173,13 +242,13 @@ export default NavBurger
 //       d:"M0,37.986,60.851,0",
 //       transform:"translate(67.067 21.077) rotate(77)"        
 //     },
-
+    
 //     line2: {
 //       d: "M0,37.986,60.851,0",
 //       transform: "translate(20.331 43.539) rotate(-13)"
 //     }
-
-
+    
+    
 //   }
 
 
@@ -209,7 +278,7 @@ export default NavBurger
 
 
 //           {!isToggled &&
-
+      
 //             <>
 //  <div className='nav-burger' >
 //             <Spring from={{ opacity: 0.6, scale: 0.2, height: '80.675'}} to={{ opacity: 1, scale: 1, height: '110.675' }} >
@@ -217,8 +286,8 @@ export default NavBurger
 
 //                 <svg 
 
-
-
+              
+                
 //                 // style={props}
 //                   xmlns="http://www.w3.org/2000/svg"
 //                   width="109.74"
@@ -323,7 +392,7 @@ export default NavBurger
 
 
 
-
+ 
 //  <animated.path 
 //  d="M0,37.986,60.851,0" 
 // //  transform="translate(20.331 43.539) 
