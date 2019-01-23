@@ -12,12 +12,13 @@ import { Spring, config } from 'react-spring'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 // import { navBurger } from '../../public/icons/SVG/icons'
 import NavBurger from '../components/NavBurger'
+import Header from '../components/header'
 
 const IndexPage = () => (
   <>
 
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-
+    <Header />
     <div className="hero">
       <div className='nav-burger nav-burger--home'>
         {/* {navBurger} */}
@@ -68,7 +69,7 @@ const IndexPage = () => (
         <Spring from={{ transform: 'translate3d(0 ,500%,0)', opacity: 0 }} to={{ transform: 'translate3d(0,0,0)', opacity: 1 }} delay='300'>
           {props => (
 
-            <AniLink cover direction="left" top="exit" to="projects-2" bg="#131515">
+            <AniLink cover direction="left" top="exit" to="projects" bg="#131515">
               <button className="btn" style={props}>SEE MY WORK</button>
             </AniLink>
           )}

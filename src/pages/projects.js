@@ -83,7 +83,7 @@ class Projects extends Component {
                     />
 
                 </div>
-                <AniLink cover direction="right" to="/" bg="#131515">Go back to the homepage </AniLink>
+                {/* <AniLink cover direction="right" to="/" bg="#131515">Go back to the homepage </AniLink> */}
             </Layout >
         )
     }
