@@ -13,7 +13,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-        // path: path.join(__dirname, `src`, `images`),
       },
     },
 
@@ -23,26 +22,11 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          // families: ['Droid Sans:300,400', 'Droid Serif']
           families: ['Lato:300,400', 'Sans Serif']
         }
       }
     },
 
-
-
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `Lato`,
-    //         variants: ["300", "400"],
-    //         subsets: [`latin`],
-    //       }
-    //     ],
-    //   },
-    // },
 
 
 

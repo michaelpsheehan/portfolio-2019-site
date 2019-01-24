@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
-import { Spring, config } from 'react-spring'
-import { Link } from 'gatsby'
+import { Spring } from 'react-spring'
+
 import Img from 'gatsby-image'
 
 
 class ProjectOverlay extends Component {
   render() {
-    const { image, name, description, siteLink, github, githubLink, delay } = this.props
+    const { image, name, description, siteLink, githubLink, delay } = this.props
 
     const buttons = githubLink ? (
       <>
         <div className="project-overlay__buttons">
-          <a href={siteLink} target="_blank" rel="noopener norefferer">
+          <a href={siteLink} target="_blank" rel="noopener noreferrer">
             <button className="btn btn--ghost  project-overlay__button-1" >Visit Site</button>
           </a>
-          <a href={githubLink} target="_blank" rel="noopener norefferer">
+          <a href={githubLink} target="_blank" rel="noopener noreferrer">
             <button className="btn btn--ghost project-overlay__button-2" >View Code</button>
           </a>
         </div>
@@ -23,16 +23,12 @@ class ProjectOverlay extends Component {
     ) : (
         <>
           <div className="project-overlay__buttons">
-            <a href={siteLink} target="_blank" rel="noopener norefferer">
+            <a href={siteLink} target="_blank" rel="noopener noreferrer">
               <button className="btn btn--ghost  project-overlay__button-solo" >Visit Site</button>
             </a>
           </div>
         </>
       )
-
-
-
-
 
     return (
       <>

@@ -1,24 +1,10 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
-
 import { graphql } from 'gatsby'
-
-import Img from 'gatsby-image'
-import Layout from '../components/layout'
 import SEO from '../components/seo'
-import AniLink from "gatsby-plugin-transition-link/AniLink";
-
-import { Spring, Transition, config, animated } from 'react-spring'
-// import ProjectOverlay from '../components/ProjectOverlay----old';
-
-import image2 from '../images/martalynx1080.jpg'
-import OverlayTest from '../components/overlay_test';
+import { Spring } from 'react-spring'
+import Layout from '../components/layout'
 import ProjectOverlay from '../components/ProjectOverlay';
-
-
-
 class Projects extends Component {
-
 
     state = {
         toggle: false,
@@ -32,8 +18,6 @@ class Projects extends Component {
             name: 'Marta Lynx',
             description: ' Bespoke Wordpress theme developed. Uses Custom Post Types, Advanced Custom Fields and custom PHP.',
             siteLink: 'https://www.martalynx.com/',
-
-
         }
     }
 
@@ -49,12 +33,7 @@ class Projects extends Component {
             <Layout>
                 <SEO title="Page two" />
 
-                < Spring
-                    from={
-                        { opacity: 0 }}
-                    to={{ opacity: 1 }}
-                // delay='500'
-                >
+                < Spring from={{ opacity: 0 }} to={{ opacity: 1 }} >
                     {props => (
                         <>
                             <h1 style={props}>Projects</h1>
@@ -64,7 +43,6 @@ class Projects extends Component {
                 </Spring >
 
                 <div className="projects-grid" >
-
                     <ProjectOverlay
                         image={img1}
                         name={project1.name}
@@ -83,7 +61,6 @@ class Projects extends Component {
                     />
 
                 </div>
-                {/* <AniLink cover direction="right" to="/" bg="#131515">Go back to the homepage </AniLink> */}
             </Layout >
         )
     }
@@ -91,8 +68,6 @@ class Projects extends Component {
 
 
 export default Projects
-
-
 
 export const projectsQuery = graphql`
   query {
@@ -111,7 +86,5 @@ export const projectsQuery = graphql`
         }
       }
     }
-
-
   }
 `

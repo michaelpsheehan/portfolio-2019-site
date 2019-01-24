@@ -1,17 +1,11 @@
 .header{
     background-color: $color__main;
-    // height: 177px;
-    height: 14rem;
-    // width: 100vw;
-    // display: flex;
-    position: relative;
-    // position: fixed;
+   height: 14rem;
+  position: relative;
 
     @media only screen and (max-width: $query__small) {
         height: 10rem;
-
        }
-
 }
 
 
@@ -25,48 +19,8 @@
     
     @media only screen and (min-width: $query__largest) {
         right:6.5rem;
-
     }
-
 }
-
-// .nav-burger {
-//     top: 50%;
-//     transform: translate(0, -50%);
-
-// }
-
-// .nav-burger--close {
-//     &:hover {
-//         cursor: pointer;
-//     }
-//     z-index: 999;
-// // border: 2px solid green;
-// position: fixed;
-// right: 3rem;
-// top: 2.5rem;
-// @media only screen and (min-width: $query__small) {
-// top: 4.5rem;
-// }
-// // top: 2rem;
-// @media only screen and (min-width: $query__largest) {
-//     right:9.5rem;
-
-// }
-
-// }
-
-// .nav-burger--home {
-//        top: 7rem;
-// }
-
-
-
-// .navbar {
-//     height: 177px;
-//     color: green;
-// }
-
 
 
 .navbar {
@@ -88,100 +42,69 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 
-        // display:block;
-        // position: absolute;
-        // top:50%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
-        // margin: 10rem .2rem;
-        // margin: 8rem auto 70rem auto;
-        // padding: 8rem auto 70rem auto;
-
         @media only screen and (min-width: $query__small) {
         }
+            .active{
+                transition: all .2s;
 
-
-
-// display: flex;
-// flex-direction: column;
-// justify-content: space-around;
-// align-items: center;
-
+                li {
+                    transition: all .2s;
+                    border-bottom: 5px solid $color__white;
+                }
+            }
     }
 
     &__item{
-
-
         text-transform: uppercase;
         color: $color__white;
         font-size: 3.3rem;
         margin:1rem 0;
         padding: 1rem;
-      
         white-space:nowrap;
-        // margin: 8rem, auto 7rem auto;
-        // padding-bottom: 10rem;
+      
         @media only screen and (min-width: $query__small) {
             font-size: 3.9rem;
-        // margin: 2rem 0;
-        }
-        // margin: 2rem 0;
-        @media only screen and (min-width: $query__largest) {
+       }
+            @media only screen and (min-width: $query__largest) {
             margin: 3rem 0;
         
         }
 
-        // background: linear-gradient(120deg, transparent 0%, transparent 50%, $color__white 50%);
         background: linear-gradient(120deg, transparent 0%, transparent 50%, $color__white 50%);
         background-size: 240%;
         transition: all .2s;
+
         &:hover {
 background-position: 100%;
 color: $color__main--lighter;
-
         }
-
     }
 }
 
 
 
 .nav-burger-container {
-    // border: 2px solid green;
-//     top:5px;
-//  right: 10px;
-right: 3rem;
-// top: 50%;
-    // transform: translate(0, -50%);
-    
+ right: 3rem;   
     height: 7rem;
     width: 7rem;
 top: 3rem;
-
-
-    // position: fixed;
-    position: absolute;
+       position: absolute;
     text-align: center;
     z-index: 999;
-    
-    // border: 2px solid blue;
-   //   background-color: #241F1F;
+   
   &:hover {
             cursor: pointer;
         }
-
   
     span{
         display: block;
         position: absolute;
         height: 4px;
-        // width: 50%;
-        width: 100%;
+            width: 100%;
         background: #ffffff;
         border-radius: 1px;
         opacity: 1;
-        // left: 50%;
-        right: 0;
+           right: 0;
         top: 50%;
         transform: translate(0, -50%);
         transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -199,12 +122,12 @@ top: 3rem;
        }
       
       span:last-child {
-        // top:70%;
          top:80%;
       }
       
 
       .nav-burger {
+
           &--open {
 
             span {
@@ -215,40 +138,20 @@ top: 3rem;
              transform:translate(-50%, -50%) rotate(-135deg) scale(.6)
                }   
 
-               &:nth-of-type(2){       
-       
-               
-                   // --- fly left animation
-                
+               &:nth-of-type(2){                   
                 left: 50%;
                 top: 50%;
                 transform:translate(-50%, -50%) rotate(135deg) ;
-                 // opacity: 0;
-                
-                // transform: translateX(-201vw);
-                transform: translateX(-101vw);
+               transform: translateX(-101vw);
               }
-              
-              
               
                &:last-child {
            left: 50%;
            top: 50%;
             transform:translate(-50%, -50%) rotate(135deg) scale(.6)
               } 
-
-
-
-
-
-
           }
       }
-
-
-
-
-
   }
 }
 
@@ -257,5 +160,4 @@ top: 3rem;
 .nav-burger--open .nav-burger-container {
     background-color: yellow;
     position: fixed;
-
 }

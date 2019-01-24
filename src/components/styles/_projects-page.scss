@@ -1,63 +1,38 @@
 // $color__main: green;
 
 .site-content {
-    // display: flex;
-    // flex: 1;
-    margin: 0 0.2rem;
-    min-height: auto;
+      margin: 0 0.2rem;
+    
     @media only screen and (min-width: $query__largest) {
-        // border: 2px solid red;
-        min-height: 100%;
+               min-height: 100%;
         margin: 0 83.5px;
    }
 
 }
 
-.projects-grid {
-    
-    
+.projects-grid {    
     display: grid;
     grid-template-columns: 1fr ;
-    // grid-column-gap: 6rem;
     grid-column-gap: 4rem;
-
     margin: 0;
     
     @media only screen and (min-width: $query__large) {
-        // border: 1px solid pink;
-        grid-template-columns: 1fr 1fr;
-        // margin: 2rem;
+           grid-template-columns: 1fr 1fr;
         margin: 1rem;
        }
+    }
 
-}
-
-
-
-
-.project-container {
-    
+.project-container {    
     margin: 0 0.2rem 4rem 0.2rem;
-    // padding: 0 0.2rem 4rem 0.2rem;
     position: relative;
     width:100%;
-    // height: 100%;
     height: auto;
-       
-    
-    // @media only screen and (max-width: $query__small) {
-    //     margin: 0 0.2rem 4rem 0.2rem;
-    //     padding: 0 0.2rem;
-    // }
+
     @media only screen and (min-width: $query__largest) {
-        // height: 475px;
+  
         width: 100%;
-        // width: auto;
         margin: 1rem;
-        // padding: 2rem;
     }
-    
-    
 }
 
 
@@ -69,7 +44,6 @@
       left: 0;
       right: 0;
       height: 100%;
-    //   width: 100%;
       opacity: 0;
       transition: .2s ease;
       background-color: $color__main--lighter;
@@ -93,31 +67,14 @@
 
                                 @media only screen and(min-width: $query__large) {
                                     .project-overlay__title {top: 4rem;}
-                                    // .project-overlay__description { left: 50%; opacity: 1;}
                                     .project-overlay__button-1, .project-overlay__button-2, .project-overlay__button-solo  {bottom: 1.5rem;}
-                                    // .project-overlay__button-2 {transition-delay: .1s;}
                                 }
                                 @media only screen and(min-width: $query__largest) {
                                     .project-overlay__title {top: 7rem; }
-                                    // .project-overlay__description { left: 50%; opacity: 1;}
                                     .project-overlay__button-1, .project-overlay__button-2, .project-overlay__button-solo  {bottom: 3.5rem;}
-                                    // .project-overlay__button-2 {transition-delay: .1s;}
                                 }
             }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .project-overlay__button-1, .project-overlay__button-2, .project-overlay__button-solo {
     transition-delay: 2s;
@@ -126,42 +83,24 @@
     bottom: -5rem;
     position: absolute;
     margin: 1.5rem 1rem;
-    
-    @media only screen and(min-width: $query__largest) {
-        // margin: 1.5rem 5rem;
     }
-
-
-
-}
 
 
 .project-overlay__button-1 {
     left: 10%;
-    // transform: translate(-10%);
-    // margin-right: 2rem;
 
     @media only screen and(min-width: $query__small ) {
-        // left: 40%;
         left: 35%;
-        // transform: translate(-40%);
-        // margin-right: 2rem;
-        
     }
 }
 
 .project-overlay__button-2 {
     right: 10%;
-    // transform: translate(-60%);
-    @media only screen and (min-width: $query__small) {
-        // left: 50%;
-        left: 55%;
-        // transform: translate(-60%);
-        // margin-left: 1rem;
 
+    @media only screen and (min-width: $query__small) {
+        left: 55%;
     }
 }
-
 
 .project-overlay__button-solo {
     left: 50%;
@@ -181,19 +120,12 @@
         left: 50%;
         transform: translate(-50%);
         opacity: 0;
-        
 
         @media only screen and (min-width: $query__small) {
             font-size: 2.9rem;
             top: 3rem;
             margin: 1rem;
         }
-
-        // @media only screen and (min-width: $query__largest) {
-        //     font-size: 2.9rem;
-        //     top: 3rem;
-        //     margin: 1rem;
-        // }
     }
     
     &__description {
@@ -210,14 +142,9 @@
     @media only screen and(min-width: $query__small) {
         font-size: 1.9rem;
     width: 32rem;
-    margin: 1rem;
-    
+    margin: 1rem;    
     left: 1%;
-    transform: translate(-50%, -50%);
-            
+    transform: translate(-50%, -50%);            
         }
-
 }
-
-
 }
