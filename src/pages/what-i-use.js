@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { htmlIcon, cssIcon, sassIcon, jsIcon, reactIcon, reduxIcon, gatsbyIcon, wordpressIcon, gulpIcon, gitIcon } from '../../public/icons/SVG/icons'
+import { htmlIcon, cssIcon, sassIcon, jsIcon, reactIcon, reduxIcon, gatsbyIcon, wordpressIcon, gulpIcon, gitIcon } from '../components/icons'
 import Icon from '../components/icon';
 
 const WhatIUse = () => (
