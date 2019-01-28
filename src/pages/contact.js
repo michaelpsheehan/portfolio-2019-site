@@ -16,10 +16,10 @@ const ContactPage = () => (
 
             <form
                 name='contact'
-                method='POST'
+                method='post'
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                action="/confirmation"
+            // /action="/confirmation"
             >
                 <input name='name' placeholder="Your Name" type='text' />
                 <input name='email' placeholder="Your email" type='email' />
