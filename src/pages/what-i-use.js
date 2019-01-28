@@ -7,7 +7,7 @@ import Icon from '../components/icon';
 const WhatIUse = () => (
 
     <Layout>
-        <SEO title="Contact Form" />
+        <SEO title="What i use" />
         <h1>I Develop With</h1>
 
         <div className="site-content--what-i-use" style={{ maxWidth: '1140px', paddingTop: '4rem' }}>
