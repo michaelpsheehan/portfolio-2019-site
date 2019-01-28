@@ -12,17 +12,20 @@ const ContactPage = () => (
             display: 'flex',
             alignItems: 'start',
             justifyContent: 'center'
+
         }}>
 
             <form
-                name='contact'
+                name='contact-form'
                 method="POST" data-netlify="true"
                 data-netlify-honeypot="bot-field"
             // /action="/confirmation"
             >
-                <label>name: <input name='name' placeholder="Your Name" type='text' /> </label>
-                <label>email: <input name='email' placeholder="Your email" type='email' /></label>
-                <label>Message:  <textarea className="text-area" name='message' placeholder="Your Message" type='text-area' required /> </label>
+                <label htmlFor='name' ><input name='name' placeholder="Your Name" type='text' /> </label>
+                <label htmlFor='email' > <input name='email' placeholder="Your email" type='email' /></label>
+                <label htmlFor='message' > <textarea className="text-area" name='message' placeholder="Your Message" type='text-area' required /> </label>
+
+                <input type="hidden" name="bot-field" />
                 <button className="btn btn--full" type="submit">Send</button>
             </form>
         </div>
