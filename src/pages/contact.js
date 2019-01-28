@@ -24,7 +24,7 @@ const ContactPage = () => (
                 <input name='name' placeholder="Your Name" type='text' />
                 <input name='email' placeholder="Your email" type='email' />
                 <textarea className="text-area" name='message' placeholder="Your Message" type='text-area' required />
-                <button className="btn btn--full">Send</button>
+                <button className="btn btn--full" type="submit">Send</button>
             </form>
         </div>
     </Layout>
