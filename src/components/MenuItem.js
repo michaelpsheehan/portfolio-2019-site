@@ -41,7 +41,7 @@ const MenuItem = ({ isToggled, name, link, delay, direction, animationType, acti
                                 cover
                                 direction={direction}
                                 to={link}
-                                bg="#131515"
+                                bg="#1a68af"
                                 activeClassName="active"
                             >
                                 <li className="navbar__item"  > {name}</li></AniLink>

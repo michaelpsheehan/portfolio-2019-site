@@ -31,13 +31,13 @@ class Projects extends Component {
 
         return (
             <Layout>
-                <SEO title="Page two" />
+                <SEO title="Projects" />
 
                 < Spring from={{ opacity: 0 }} to={{ opacity: 1 }} >
                     {props => (
                         <>
                             <h1 style={props}>Projects</h1>
-                            <hr></hr>
+
                         </>
                     )}
                 </Spring >

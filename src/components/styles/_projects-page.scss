@@ -2,9 +2,9 @@
 
 .site-content {
       margin: 0 0.2rem;
+    //   min-height: 100%;
     
     @media only screen and (min-width: $query__largest) {
-               min-height: 100%;
         margin: 0 83.5px;
    }
 

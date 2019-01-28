@@ -5,8 +5,8 @@ white-space:nowrap;
 
 
 .btn {
-    background-color: $color__white;
-    color: $color__main;
+    background-color: $color__main;
+    color: $color__white;
     border: none;
     padding: .15rem 1rem;
     margin: 2rem 1rem;
@@ -23,12 +23,12 @@ white-space:nowrap;
 
 .btn--ghost {
     background-color: transparent;
-    border: 1px solid $color__white;
-    color: $color__white;
-
-    &:hover {
-        background-color: $color__white;
+    border: 1px solid $color__main;
     color: $color__main;
+    
+    &:hover {
+        background-color: $color__main;
+        color: $color__white;
     }
 }
 form{
@@ -39,6 +39,18 @@ form{
     // transform: translateX(-50%);
     margin: auto;
 }
+
+.btn--ghost--white {
+    
+    border: 1px solid $color__white;
+    color: $color__white;
+    background-color: transparent;
+            &:hover {
+                background-color: $color__white;
+                color: $color__main--lighter;
+            }
+}
+
 
 input, textarea{
     display: block;

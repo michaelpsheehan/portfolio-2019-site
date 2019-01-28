@@ -1,6 +1,5 @@
 
 .site-body {
-    height: 100vh;
    width: 100vw;
        display: grid;
     grid-template-columns: 1fr;
@@ -8,17 +7,29 @@
 }
 
 .hero{
-    height: calc(100vh - 14rem);
+    height: calc(100vh - 10rem);
     width: 100vw;
     background-color:$color__main;
     margin: 0;
     position: relative;    
 
-    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+&__buttons {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    
+    @media only screen and (min-width: $query__small) {
+
         height: calc(100vh - 14rem);
-    }
+    }   
+
+
+
+
+
 
 h2{
     text-transform: none;
@@ -40,6 +51,7 @@ h2{
 .site-content {
 
   &--what-i-use {
+      
     margin: auto;
       display: grid;
     grid-template-rows: 1fr 1fr 1fr;
