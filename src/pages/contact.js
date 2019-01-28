@@ -16,14 +16,13 @@ const ContactPage = () => (
 
             <form
                 name='contact'
-                method='post'
-                data-netlify="true"
+                method="POST" data-netlify="true"
                 data-netlify-honeypot="bot-field"
             // /action="/confirmation"
             >
-                <input name='name' placeholder="Your Name" type='text' />
-                <input name='email' placeholder="Your email" type='email' />
-                <textarea className="text-area" name='message' placeholder="Your Message" type='text-area' required />
+                <label>name: <input name='name' placeholder="Your Name" type='text' /> </label>
+                <label>email: <input name='email' placeholder="Your email" type='email' /></label>
+                <label>Message:  <textarea className="text-area" name='message' placeholder="Your Message" type='text-area' required /> </label>
                 <button className="btn btn--full" type="submit">Send</button>
             </form>
         </div>
