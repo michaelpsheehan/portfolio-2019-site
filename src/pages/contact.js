@@ -18,11 +18,12 @@ const ContactPage = () => (
             <form
                 name="contact-form-2"
                 method="post"
+                netlify="true"
                 data-netlify="true"
-                // data-netlify-honeypot="bot-field"
-                // netlify-honeypot="bot-field"
-                // action="/confirmation"
-                action="#"
+            // data-netlify-honeypot="bot-field"
+            // netlify-honeypot="bot-field"
+            // action="/confirmation"
+            // action="#"
             >
 
 
