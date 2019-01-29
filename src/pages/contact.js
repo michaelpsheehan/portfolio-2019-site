@@ -16,7 +16,7 @@ const ContactPage = () => (
         }}>
 
             <form
-                name="contact-form-1"
+                name="contact-form-2"
                 method="post"
                 data-netlify="true"
             // data-netlify-honeypot="bot-field"
