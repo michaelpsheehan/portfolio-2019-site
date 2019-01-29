@@ -16,12 +16,15 @@ const ContactPage = () => (
         }}>
 
             <form
-                name='contact-form'
-                method="post" data-netlify="true"
-            // data-netlify-honeypot="bot-field"
+                name='contact-form-1'
+                method="post"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
             // action="/confirmation"
             >
                 {/* <input type="hidden" name="bot-field" /> */}
+                <input type="hidden" name="contact-form-1" value="contact" />" and "<p hidden> <label htmlFor="bot-field">Don’t fill this out:{' '}<input name="bot-field" /> </label> </p>
+
                 <label htmlFor='name' ><input name='name' placeholder="Your Name" type='text' id='name' /> </label>
                 <label htmlFor='email' > <input name='email' placeholder="Your email" type='email' id='email' /></label>
                 <label htmlFor='message' > <textarea className="text-area" name='message' placeholder="Your Message"
