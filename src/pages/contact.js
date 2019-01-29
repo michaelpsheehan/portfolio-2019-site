@@ -19,18 +19,18 @@ const ContactPage = () => (
                 name="contact-form-1"
                 method="post"
                 data-netlify="true"
-                // data-netlify-honeypot="bot-field"
-                netlify-honeypot="bot-field"
+            // data-netlify-honeypot="bot-field"
+            // netlify-honeypot="bot-field"
             // action="/confirmation"
             >
-                <p class="hidden">
+                {/* <p class="hidden">
                     <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-                </p>
+                </p> */}
 
                 <label htmlFor='name' >
                     <input
                         name='name'
-                        placeholder="Your Name"
+                        // placeholder="Your Name"
                         type='text'
                         id='name'
                     />
@@ -38,7 +38,7 @@ const ContactPage = () => (
                 <label htmlFor='email' >
                     <input
                         name='email'
-                        placeholder="Your email"
+                        // placeholder="Your email"
                         type='email'
                         id='email'
                     />
@@ -47,9 +47,9 @@ const ContactPage = () => (
                     <textarea
                         className="text-area"
                         name='message'
-                        placeholder="Your Message"
+                        // placeholder="Your Message"
                         id='message'
-                        required
+                    // required
                     />
                 </label>
 
