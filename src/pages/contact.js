@@ -19,9 +19,10 @@ const ContactPage = () => (
                 name="contact-form-2"
                 method="post"
                 data-netlify="true"
-            // data-netlify-honeypot="bot-field"
-            // netlify-honeypot="bot-field"
-            // action="/confirmation"
+                // data-netlify-honeypot="bot-field"
+                // netlify-honeypot="bot-field"
+                // action="/confirmation"
+                action="#"
             >
                 {/* <p class="hidden">
                     <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
@@ -57,7 +58,7 @@ const ContactPage = () => (
             </form>
 
         </div>
-    </Layout>
+    </Layout >
 )
 
 export default ContactPage
