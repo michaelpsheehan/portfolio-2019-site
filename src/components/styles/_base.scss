@@ -1,6 +1,6 @@
 html {
 	box-sizing: border-box;
-	height: 100%;
+	// height: 100%;
 	font-size: 62.5%; //10px/16px = 62.5% => 1rem = 10px
 
 // 	@media only screen and (max-width: $query__largest) {
@@ -19,7 +19,7 @@ html {
 body {
 	// background: $color__background-body;
 	/* Fallback for when there is no custom background color defined. */
-height: 100%;
+// height: 100%;
 font-size: 1.6rem;
 // color: $color__text--grey;
 
@@ -49,6 +49,7 @@ figure {
 
 ul {
 	text-decoration: none;
+	padding: 0;
 }
 li {
 	list-style: none;

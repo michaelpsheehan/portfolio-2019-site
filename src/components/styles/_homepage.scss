@@ -7,7 +7,7 @@
 }
 
 .hero{
-    height: calc(100vh - 10rem);
+    height: calc(100vh - 8rem);
     width: 100vw;
     background-color:$color__main;
     margin: 0;
@@ -86,4 +86,8 @@ h2{
     svg{        
         justify-self: center;
     }
+}
+
+.confirmation-page{
+    margin-top: 10rem;
 }

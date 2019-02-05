@@ -7,7 +7,11 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 const SecondPage = () => (
     <Layout>
         <SEO title="Contact Form confirmation" />
-        <h1>Thank You for Your Message</h1>
+        <div className="site-content" >
+            <div className='confirmation-page'>
+                <p>Thank You for Your Message</p>
+            </div>
+        </div>
 
         <AniLink cover
             direction="right"

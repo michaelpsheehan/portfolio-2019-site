@@ -10,7 +10,7 @@ class Projects extends Component {
         toggle: false,
         project1: {
             name: 'Gig Findr',
-            description: ' Full Stack Javascript CRUD Portfolio App using React, Redux, Firebase and Firestore.',
+            description: ' Full Stack CRUD Demo App using React, Redux, Firebase and Firestore.',
             siteLink: 'https://task-e5ee4.firebaseapp.com/',
             githubLink: 'https://github.com/michaelpsheehan/gig-findr',
         },
@@ -42,24 +42,26 @@ class Projects extends Component {
                     )}
                 </Spring >
 
-                <div className="projects-grid" >
-                    <ProjectOverlay
-                        image={img1}
-                        name={project1.name}
-                        description={project1.description}
-                        siteLink={project1.siteLink}
-                        githubLink={project1.githubLink}
-                        delay='0'
-                    />
+                <div className="site-content">
+                    <div className="projects-grid" >
+                        <ProjectOverlay
+                            image={img1}
+                            name={project1.name}
+                            description={project1.description}
+                            siteLink={project1.siteLink}
+                            githubLink={project1.githubLink}
+                            delay='0'
+                        />
 
-                    <ProjectOverlay
-                        image={img2}
-                        name={project2.name}
-                        description={project2.description}
-                        siteLink={project2.siteLink}
-                        delay='500'
-                    />
+                        <ProjectOverlay
+                            image={img2}
+                            name={project2.name}
+                            description={project2.description}
+                            siteLink={project2.siteLink}
+                            delay='500'
+                        />
 
+                    </div>
                 </div>
             </Layout >
         )

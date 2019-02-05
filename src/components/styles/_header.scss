@@ -4,7 +4,7 @@
   position: relative;
 
     @media only screen and (max-width: $query__small) {
-        height: 10rem;
+        height: 8rem;
        }
 }
 
@@ -84,16 +84,18 @@ color: $color__main--lighter;
 
 
 .nav-burger-container {
- right: 3rem;   
-    height: 7rem;
-    width: 7rem;
-top: 2rem;
-position: absolute;
-text-align: center;
-z-index: 999;
-
-@media only screen and (min-width: $query__small) {
-    top: 3rem;
+ right: 2rem;   
+    height: 5rem;
+    width: 5rem;
+    top: 2rem;
+    position: absolute;
+    text-align: center;
+    z-index: 999;
+    
+    @media only screen and (min-width: $query__small) {
+        top: 4rem;
+        height: 7rem;
+        width: 7rem;
     
     }
    

@@ -33,7 +33,13 @@ class ProjectOverlay extends Component {
 
     return (
       <>
-        <Spring from={{ marginTop: 500, opacity: 0 }} to={{ marginTop: 0, opacity: 1 }} delay={delay}>
+        <Spring from={{
+          marginTop: 50,
+          opacity: 0
+        }} to={{
+          marginTop: 0,
+          opacity: 1
+        }} delay={delay}>
 
           {props => (
             <div className='project-container' style={props} >

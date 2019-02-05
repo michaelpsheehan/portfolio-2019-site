@@ -13,11 +13,11 @@
 .projects-grid {    
     display: grid;
     grid-template-columns: 1fr ;
-    grid-column-gap: 4rem;
     margin: 0;
     
     @media only screen and (min-width: $query__large) {
-           grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 4rem;
         margin: 1rem;
        }
     }
